@@ -1,13 +1,13 @@
 // Importing Express
 const express = require("express");
 const notes = require("./data/notes");
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
 
-// Creating object of this imporeted package
+// Creating object of this imported package
 const app = express();
 dotenv.config();
 
-//Creating Endpoint
+//Creating First Endpoint / API
 app.get("/", (req, res) => {
     res.send("API is running...");
 })
