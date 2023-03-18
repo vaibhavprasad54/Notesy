@@ -1,4 +1,5 @@
 import React from 'react'
+import "./MainScreen.css";
 
 const MainScreen = ({title, children}) => {
   return (
@@ -10,9 +11,10 @@ const MainScreen = ({title, children}) => {
                     {
                         title && (
                         <> 
-                            <h1 className='text-3xl font-medium'>
+                            <h1 className='text-3xl font-medium pb-1'>
                                 {title}
                             </h1> 
+                            
                             <hr />
                         </>
                     )}

@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "module": "commonjs",
   "scripts": {
-    "start": "nodemon backend/server.js"
+    "start": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "author": "Vaibhav Prasad",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.1",
     "nodemon": "^2.0.20"
   }
 }
