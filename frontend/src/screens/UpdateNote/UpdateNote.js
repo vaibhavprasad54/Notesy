@@ -8,7 +8,9 @@ import axios from "axios";
 import { deleteNoteAction, updateNoteAction } from '../../actions/notesActions';
 import { useParams } from 'react-router-dom';
 
-const UpdateNote = ({ match }) => {
+const UpdateNote = () => {
+
+  let navigate = useNavigate();
 
     const [title, setTitle] = useState();
     const [content, setContent] = useState();
@@ -33,7 +35,7 @@ const UpdateNote = ({ match }) => {
     };
 
 
-    let navigate = useNavigate();
+    
     const userInfo = localStorage.getItem('userInfo');  
 
     useEffect(() => {
@@ -41,7 +43,7 @@ const UpdateNote = ({ match }) => {
 
           const config = {
             headers: {
-                 Authorization: `Bearer${userInfo.token}`,        
+                 Authorization: `Bearer ${userInfo.token}`,       
             },
           };
 
@@ -55,7 +57,7 @@ const UpdateNote = ({ match }) => {
         };
     
         fetching();
-      }, [id, date]);            // useEffect is going to fire off whenever these depencies in the array change!
+      }, [id, date, userInfo]);            // useEffect is going to fire off whenever these depencies in the array change!
     
 
 

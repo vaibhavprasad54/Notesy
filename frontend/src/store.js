@@ -6,6 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { userLoginReducer, userRegisterReducer, userUpdateReducer } from './reducers/userReducers';
 import { noteDeleteReducer, notesCreateReducer, notesListReducer, notesUpdateReducer } from './reducers/notesReducers';
 
+
 const reducers = combineReducers({
     //This will contain our reducers
    userLogin: userLoginReducer,
@@ -20,7 +21,7 @@ const reducers = combineReducers({
 const userInfoFromStorage = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null;
 
 //Initial state of the application
-const initialState = {
+const preloadedState = {
     userLogin: { userInfo: userInfoFromStorage },
 };
 
@@ -30,7 +31,7 @@ const middleware = [thunk];
 //Initialising Store
 const store = configureStore({
     reducer: reducers,
-    initialStateList: initialState,
+    preloadedState,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
          immutableCheck: false,
          serializableCheck: false,

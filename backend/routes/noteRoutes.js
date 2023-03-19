@@ -10,9 +10,9 @@ router.route('/').get( protect, getNotes );                     // Creating API 
 
 router.route('/create').post(protect, createNote );             // Protect is used to protect the route so that only an authorized user can access it.  
 
-router.route('/:id').get(protect, getNoteByID);                     // Creating API to get Note by ID.
+router.route('/:id').get(getNoteByID);                     // Creating API to get Note by ID.
 
-router.route('/:id').get(protect, getNoteByID).put(protect, UpdateNote).delete(protect, DeleteNote);
+router.route('/:id').get(getNoteByID).put(protect, UpdateNote).delete(protect, DeleteNote);
 
 module.exports = router;
 

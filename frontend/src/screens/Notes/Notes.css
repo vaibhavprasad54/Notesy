@@ -16,7 +16,9 @@
     border-radius: 8px;
 }
 
-
+.notesCard{
+    width: 27rem;
+}
 
 
 @media only screen and (max-width: 450px) {

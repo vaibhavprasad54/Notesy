@@ -3,6 +3,7 @@ import pen from '../../assets/pen.png'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
 import ErrorMessage from '../../components/ErrorMessage'
+import SuccessMessage from '../../components/SuccessMessage'
 import Loading from '../../components/Loading'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
@@ -54,7 +55,7 @@ const ProfileScreen = () => {
   }
 
   useEffect(() => {
-    const userInfo = localStorage.getItem('userInfo');
+    // const userInfo = localStorage.getItem('userInfo');
     if (!userInfo) {
       navigate("/");
     } else {
@@ -79,11 +80,11 @@ const ProfileScreen = () => {
         <div className="w-full max-w-md space-y-8">
           <div>
             <img
-              className="mx-auto h-20 w-auto"
+              className="mx-auto h-32 w-h-32 rounded-full "
               src={pic}
               alt="Your Image"
             />
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="mt-3 text-center text-3xl font-bold tracking-tight text-gray-900">
               Edit your Profile
             </h2>
           </div>
@@ -93,7 +94,7 @@ const ProfileScreen = () => {
           <form  className="mt-8 space-y-6">
             {/* <input type="email" name="remember" defaultValue="true" /> */}
             { loading && <Loading /> }
-            { success && <ErrorMessage> Updated Successfully </ErrorMessage> }
+            { success && <SuccessMessage> Updated Successfully </SuccessMessage> }
             { error && <ErrorMessage> {error} </ErrorMessage> }
             <div className="-space-y-px rounded-md shadow-sm">
             <div>
@@ -172,7 +173,7 @@ const ProfileScreen = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
+            {/* <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <input
                   id="remember-me"
@@ -190,14 +191,14 @@ const ProfileScreen = () => {
                   Forgot your password?
                 </a>
               </div>
-            </div>
+            </div> */}
 
             <div>
                 
               <button
                 onClick={submitHandler}
                 type="submit"
-                className="group my-4 relative flex w-full justify-center rounded-md border border-transparent bg-purple-500 py-2 px-4 text-sm font-medium text-white hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="group my-4 relative flex w-full justify-center rounded-md border border-transparent bg-purple-500 py-2 px-4 text-base font-medium text-white hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   {/* <LockClosedIcon className="h-5 w-5 text-gray-300 group-hover:text-white" aria-hidden="true" /> */}

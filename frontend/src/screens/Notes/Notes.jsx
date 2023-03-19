@@ -59,7 +59,7 @@ const Notes = ({ search }) => {
     <>
       <MainScreen title={`Welcome back ${userInfo && userInfo.name} `}>
         <Link to="createnote">
-          <button className="rounded-lg bg-purple-600 py-2 px-4 text-white my-5 hover:bg-purple-700">
+          <button className="rounded-lg bg-purple-600 py-2 px-4 ml-6 text-white my-5 hover:bg-purple-700">
             {" "}
             Create New Note{" "}
           </button>
@@ -71,7 +71,7 @@ const Notes = ({ search }) => {
           { loading && <Loading /> }
         {
           notes?.reverse().filter((filteredNote) => filteredNote.title.toLowerCase().includes(search.toLowerCase())).map((note) => (
-            <div className="max-w-sm rounded m-5 p-2 overflow-hidden w-96 shadow-md bg-slate-200" key={note._id}>
+            <div className=" notesCard rounded m-5 p-2 overflow-hidden shadow-md bg-slate-200" key={note._id}>
               <div className="px-6 py-4 h-48 overflow-y-auto "> 
                     <p className=" text-white max-w-max px-2 py-1 rounded text-sm mb-2" style={{backgroundColor: "#04153f"}} >{note.category}</p>
                     <div className="font-bold text-xl mb-2"> {note.title} </div>
@@ -85,7 +85,7 @@ const Notes = ({ search }) => {
                       <button className="rounded-md text-sm bg-[#a2ccff] py-2 px-3 mr-2 hover:bg-[#79aeed]"> Edit <FontAwesomeIcon icon={faPen} size="sm" className="pl-1" /> </button>
                   </Link>
                   <Link>
-                      <button onClick={() => deleteNote(note._id)} className="rounded-md text-sm text-white bg-[#163485] py-2 px-3 mr-2 hover:bg-[#0b256b]" style={{backgroundColor: "#920909"}}> Delete <FontAwesomeIcon icon={faTrashCan} size="sm" className="pl-1" /> </button>
+                      <button onClick={() => deleteNote(note._id)} className="rounded-md text-sm text-white bg-[#920909] py-2 px-3 mr-2 hover:bg-[#831414]"> Delete <FontAwesomeIcon icon={faTrashCan} size="sm" className="pl-1" /> </button>
                   </Link>
                 </div>
                 <div className="date">

@@ -11,11 +11,13 @@ const MainScreen = ({title, children}) => {
                     {
                         title && (
                         <> 
+                            <div className="mainScreenContent">
                             <h1 className='text-3xl font-medium pb-1'>
                                 {title}
                             </h1> 
                             
                             <hr />
+                            </div>
                         </>
                     )}
                     {children}

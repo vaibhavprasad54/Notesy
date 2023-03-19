@@ -1,0 +1,30 @@
+@media only screen and (max-width: 640px) {
+    .penIconContainer{
+        position: absolute;
+        left: 0rem;
+        display: none;
+    }
+    .searchBar{
+        width: 8.5rem;
+    }
+    .notesButton{
+        background-color: rgb(79, 70, 229);
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 640px) {
+    .notesButton{
+        background-color: rgb(79, 70, 229);
+    }
+    
+    .notesButton:hover{
+        background-color: rgb(64, 56, 205);
+    }
+}
+
+
+
+
+
