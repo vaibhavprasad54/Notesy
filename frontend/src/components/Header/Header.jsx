@@ -57,7 +57,7 @@ const Header = ({ setSearch }) => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="penIconContainer flex flex-shrink-0 items-center">
-                  <Link to="/">
+                  <Link to="/homepage">
                   <img
                     className="block h-8 w-auto lg:hidden ml-12 "
                     src={pen}
@@ -76,6 +76,7 @@ const Header = ({ setSearch }) => {
                       Notes
                     </Link>
                   </div>
+                  
                 </div>
               </div>
 
@@ -159,7 +160,7 @@ const Header = ({ setSearch }) => {
                 <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={item.href}
+                  href="/notes"
                   className={classNames(
                     item.current ? ' notesButton text-white' : 'text-gray-300 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
@@ -169,7 +170,7 @@ const Header = ({ setSearch }) => {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <Link to="/">
+              <Link to="/homepage">
               <Disclosure.Button className="notesButton mt-2 text-white' : 'text-gray-300 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium">
                 <button className=" text-center w-[90vw] text-white ">Home</button>

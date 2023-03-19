@@ -14,6 +14,7 @@ import CreateNote from './screens/CreateNote/CreateNote';
 import UpdateNote from './screens/UpdateNote/UpdateNote';
 import React, { useState } from 'react';
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen';
+import Homepage from './screens/Homepage/Homepage';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
     <div className='main'>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/homepage" element={<Homepage />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/register" element={<RegisterScreen />} />
