@@ -191,7 +191,7 @@ const RegisterScreen = () => {
               <button
                 onClick={submitHandler}
                 type="submit"
-                className="group my-4 relative flex w-full justify-center rounded-md border border-transparent bg-purple-500 py-2 px-4 text-sm font-medium text-white hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="group my-4 relative flex w-full justify-center rounded-md border border-transparent bg-[#4f46e5] py-2 px-4 text-sm font-medium text-white hover:bg-[#4139c8] focus:outline-none focus:ring-2 focus:ring-[#4f46e5] focus:ring-offset-2"
               >
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   <LockClosedIcon className="h-5 w-5 text-gray-300 group-hover:text-white" aria-hidden="true" />
@@ -201,7 +201,7 @@ const RegisterScreen = () => {
               </Link>
 
               <div className="log-in flex items-center justify-center">
-                <p>Already have an account ? <span className='text-purple-600'> <Link to="/login"> Sign in </Link> </span> </p>
+                <p>Already have an account ? <span className='text-[#4f46e5]'> <Link to="/login"> Sign in </Link> </span> </p>
               </div>
               
             </div>
