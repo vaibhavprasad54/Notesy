@@ -57,11 +57,12 @@ const Notes = ({ search }) => {
 
   return (
     <>
-      <MainScreen title={`Welcome back ${userInfo && userInfo.name} `}>
+      <MainScreen title={`Welcome back ${userInfo && userInfo.name}! `}>
         <Link to="createnote">
-          <button className="rounded-lg bg-purple-600 py-2 px-4 ml-6 text-white my-5 hover:bg-purple-700">
+          <button className="rounded-lg flex items-center bg-[#4F46E5] py-2 px-4 ml-6 text-white my-5 hover:bg-[#463ed4]">
             {" "}
-            Create New Note{" "}
+            <p>Create New Note</p> {" "}
+            <svg className="w-4 ml-2" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M240 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H176V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H240V80z"/></svg>
           </button>
         </Link>
         <div className="notes-section flex flex-wrap">
@@ -73,7 +74,7 @@ const Notes = ({ search }) => {
           notes?.reverse().filter((filteredNote) => filteredNote.title.toLowerCase().includes(search.toLowerCase())).map((note) => (
             <div className=" notesCard rounded m-5 p-2 overflow-hidden shadow-md bg-slate-200" key={note._id}>
               <div className="px-6 py-4 h-48 overflow-y-auto "> 
-                    <p className=" text-white max-w-max px-2 py-1 rounded text-sm mb-2" style={{backgroundColor: "#04153f"}} >{note.category}</p>
+                    <p className=" text-white max-w-max px-2 py-1 rounded text-sm mb-2" style={{backgroundColor: "#C87528"}} >{note.category}</p>
                     <div className="font-bold text-xl mb-2"> {note.title} </div>
                     <p className="text-gray-700 text-base h-16">
                         {note.content}
@@ -82,7 +83,7 @@ const Notes = ({ search }) => {
               <div className="px-6 pt-4 pb-2 flex items-center justify-between actionContainer ">
                 <div className="actionBtn">
                   <Link to={`/note/${note._id}`}>
-                      <button className="rounded-md text-sm bg-[#a2ccff] py-2 px-3 mr-2 hover:bg-[#79aeed]"> Edit <FontAwesomeIcon icon={faPen} size="sm" className="pl-1" /> </button>
+                      <button className="rounded-md text-sm text-white bg-[#112d6d] py-2 px-3 mr-2 hover:bg-[#102557]"> Edit <FontAwesomeIcon icon={faPen} size="sm" className="pl-1" /> </button>
                   </Link>
                   <Link>
                       <button onClick={() => deleteNote(note._id)} className="rounded-md text-sm text-white bg-[#920909] py-2 px-3 mr-2 hover:bg-[#831414]"> Delete <FontAwesomeIcon icon={faTrashCan} size="sm" className="pl-1" /> </button>

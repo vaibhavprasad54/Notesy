@@ -100,32 +100,12 @@ const LoginScreen = ({history}) => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                  Remember me
-                </label>
-              </div>
-
-              <div className="text-sm">
-                <a href="/" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  Forgot your password?
-                </a>
-              </div>
-            </div>
-
             <div>
               <Link to="/login"> 
               <button
                 onClick={submitHandler}
                 type="submit"
-                className="group my-4 relative flex w-full justify-center rounded-md border border-transparent bg-purple-500 py-2 px-4 text-sm font-medium text-white hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="group my-4 relative flex w-full justify-center rounded-md border border-transparent bg-[#4F46E5] py-2 px-4 text-sm font-medium text-white hover:bg-[#463ed5] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   <LockClosedIcon className="h-5 w-5 text-gray-300 group-hover:text-white" aria-hidden="true" />
@@ -135,7 +115,7 @@ const LoginScreen = ({history}) => {
               </Link>
 
               <div className="log-in flex items-center justify-center">
-                <p>Don't have an account ? <span className='text-purple-600'> <Link to="/register"> Sign up </Link> </span> </p>
+                <p>Don't have an account ? <span className='text-[#4F46E5]'> <Link to="/register"> Sign up </Link> </span> </p>
               </div>
               
             </div>
